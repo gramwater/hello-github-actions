@@ -1,3 +1,5 @@
-FROM debian：9.5-slim
+FROM debian:9.5-slim
 
-CMD ["ls"]
+ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
