@@ -3,7 +3,9 @@ on: push
 jobs:
   build:
     name: Hello world action
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
+    container:
+      image: ubuntu:latest
     steps:
       - uses: actions/checkout@v1
       - uses: ./action-a
